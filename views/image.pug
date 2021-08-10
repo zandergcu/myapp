@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  
+  img(src=image.download_url)
+  p= image.author
+  p Dimensions = #{image.width}px x #{image.height}px 
+  a.btn(title="Image by " + image.author href=image.download_url download) Download
+  a.btn(href="/start") Go Back

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Here are the image thumbnails
+  hr
+  
+  each image, index in images
+    div.card
+      p #{index+1} - #{image.author}
+      img.thumbnail(src=image.download_url)
+      a.btn(href="/start/image" + (index+1) ) Details
